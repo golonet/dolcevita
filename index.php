@@ -1,7 +1,4 @@
-<?php 
-
-
-?>
+<?php ?>
 <!DOCTYPE html>
 <html lang="he">
   <head>
@@ -9,82 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
    
-    <title></title>
+    <title>Tasks</title>
 
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-	<link href="css/jquery-ui.min.css" rel="stylesheet">
-
-	<style type="text/css">
-		.flex{
-			display: flex;	
-			border-radius: 15px; background-color: #efefef;		
-		}
-		
-		.column{
-			padding: 10px;		
-		    background-color: #ccc;
-		}
-		
-		.column1 {
-		    flex: 70%;
-		}
-		.column2 {
-		    flex: 20%;
-		    text-align: center;
-		    background-color: #333;
-    		color: #83feff;
-		}
-		
-		td:nth-child(1),th:nth-child(1) {  
-		 text-align: center;
-		}
-		
-		.deleteBtn,.editBtn,.saveBtn{
-			padding: 7px;
-		    text-align: center;
-		    color: #fff;
-		    border-radius: 50px;
-		    width: 36px;
-		    font-size: 14px;
-		    margin-left: 8px;
-		    margin-right: 7px;		    
-		}		
-		
-		.disabled{
-		    background-color: #ccc;
-		}
-		
-		/*
-		tbody td:last-of-type{
-			max-width: 120px;
-		}
-		*/
-		
-		tbody tr:hover{
-		    background-color: #efefef;
-		    cursor: pointer;
-		}
-		
-		tbody tr:hover >td span.editBtn{
-		    background-color: green;
-		    cursor: pointer;
-		}
-
-		tbody tr:hover >td span.deleteBtn{
-		    background-color: #dc4646;
-		    cursor: pointer;
-		}	
-		
-		tbody tr:hover >td span.saveBtn{
-		    background-color: #5bc0de;
-		    cursor: pointer;
-		}	
-		
-		input{
-			line-height: 15px;
-		}		
-
-	</style>
+    <link type="text/css" href="css/bootstrap.min.css" rel="stylesheet" />
+	<link type="text/css" href="css/jquery-ui.min.css" rel="stylesheet" />
+	<link type="text/css" href="css/my_style.css" rel="stylesheet" />
 
   </head>
   <body>
@@ -152,6 +78,11 @@
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/jquery-ui.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="script.js"></script>    
+    <script type="text/javascript" src="js/my_script.js"></script>    
+    
+    
+
+    
+    
   </body>
 </html>

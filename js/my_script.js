@@ -38,8 +38,8 @@ $(document).ready(function() {
 							"<td class='tDate'>"+val.date+"</td>" +
 							"<td class='tStatus'>"+val.status+"</td>"+
 							"<td class='actionBar' style='text-align: center;'>"+
-								"<span class='actionBtn deleteBtn disabled' data-action-type='delete' ><span class='glyphicon'>&#xe014;</span></span>"+
-								"<span class='actionBtn editBtn disabled' data-action-type='edit' ><span class='glyphicon glyphicon-edit'></span></span>"+		
+								"<span class='actionBtn deleteBtn disabled' data-action-type='delete' title='delete'><span class='glyphicon'>&#xe014;</span></span>"+
+								"<span class='actionBtn editBtn disabled' data-action-type='edit' title='edit'><span class='glyphicon glyphicon-edit'></span></span>"+		
 							"</td>"+
 						 "</tr>";
 			 			 	
@@ -98,7 +98,7 @@ $(document).ready(function() {
 					"<td><input type='text' disabled value='"+localdate+"' name='task_date'><span class='glyphicon glyphicon-calendar'></span></td>" +
 					"<td>Open</td>"+
 					"<td class='actionBar' style='text-align: center;'>"+
-						"<span class='actionBtn saveBtn disabled glyphicon glyphicon-floppy-saved' data-action-type='save' data-action-type='saveRows'></span>"+		
+						"<span class='actionBtn saveBtn disabled glyphicon glyphicon-floppy-saved' data-action-type='save' data-action-type='saveRows' title='save'></span>"+		
 					"</td>"+
 				 "</tr>";
 	 			 	
@@ -160,7 +160,7 @@ $(document).ready(function() {
 			    	  console.log(error);
 			      }
 			}); 
-		
+		 
 	};
 	
 	
@@ -173,7 +173,7 @@ $(document).ready(function() {
 		var rowData = TableData.tasks[tIndex];
 
 		$("#"+id).addClass("rowToUpdate");
-		$("#"+id).find(".actionBar").html('<span class="actionBtn saveBtn disabled glyphicon glyphicon-floppy-saved" data-action-type="update"></span>');		
+		$("#"+id).find(".actionBar").html('<span class="actionBtn saveBtn disabled glyphicon glyphicon-floppy-saved" data-action-type="update" title="update"></span>');		
 		$("#"+id).find(".tName").html("<input class='tName' type='text' value='"+rowData.info+"' />");
 		$("#"+id).find(".tDate").html("<input class='tDate ngDatepicker' type='text' value='"+rowData.date+"' />");
 		
@@ -229,7 +229,7 @@ $(document).ready(function() {
 	}
 	
 
-	
+
 	// datepicker //
 	$(document).on('click focus', '.ngDatepicker', function(e) {
 		var dt = new Date();
@@ -237,10 +237,17 @@ $(document).ready(function() {
 	
 		  $(this).datepicker({
 				inline: true,  
-				dateFormat: "dd-mm-yy "+time,
-				
+				dateFormat: "dd-mm-yy "+time,				
 		   });		
 	});	
 	
+	
+	
+	$(document).on('change', 'select', function(e) {			
+		$(this).css("background-color","#f9f96385");
+	});	
+	$(document).on('keyup change', 'input', function(e) {			
+		$(this).css("background-color","#f9f96385");
+	});		
 
 });	
